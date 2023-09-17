@@ -10,3 +10,19 @@ accessed at [[https://www.udemy.com/share/101J3c3@t5t0ZZXTzqCLfejVh-3w-xEgUa1ByM
 
 This project is a full-stack web application built using Django for the backend.
 It includes a RESTful API offering a comprehensive learning experience for building modern web applications.
+
+** Implemented Routes
+
+Routes exported from the command ~python manage.py show_urls~ are located in the file [[file:routes.txt][routes.txt]].
+
+* Developer
+
+[[https://github.com/Calebe94][Edimar Calebe Castanho (Calebe94)]]
+
+* License
+  :PROPERTIES:
+  :CUSTOM_ID: license
+  :END:
+All software is covered under
+[[https://www.gnu.org/licenses/gpl-3.0.en.html][GNU General Public
+License v3.0]].

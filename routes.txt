@@ -1,0 +1,58 @@
+/admin/ django.contrib.admin.sites.index        admin:index
+/admin/<app_label>/     django.contrib.admin.sites.app_index    admin:app_list
+/admin/<url>    django.contrib.admin.sites.catch_all_view
+/admin/api/movie/       django.contrib.admin.options.changelist_view    admin:api_movie_changelist
+/admin/api/movie/<path:object_id>/      django.views.generic.base.RedirectView
+/admin/api/movie/<path:object_id>/change/       django.contrib.admin.options.change_view        admin:api_movie_change
+/admin/api/movie/<path:object_id>/delete/       django.contrib.admin.options.delete_view        admin:api_movie_delete
+/admin/api/movie/<path:object_id>/history/      django.contrib.admin.options.history_view       admin:api_movie_history
+/admin/api/movie/add/   django.contrib.admin.options.add_view   admin:api_movie_add
+/admin/api/rating/      django.contrib.admin.options.changelist_view    admin:api_rating_changelist
+/admin/api/rating/<path:object_id>/     django.views.generic.base.RedirectView
+/admin/api/rating/<path:object_id>/change/      django.contrib.admin.options.change_view        admin:api_rating_change
+/admin/api/rating/<path:object_id>/delete/      django.contrib.admin.options.delete_view        admin:api_rating_delete
+/admin/api/rating/<path:object_id>/history/     django.contrib.admin.options.history_view       admin:api_rating_history
+/admin/api/rating/add/  django.contrib.admin.options.add_view   admin:api_rating_add
+/admin/auth/group/      django.contrib.admin.options.changelist_view    admin:auth_group_changelist
+/admin/auth/group/<path:object_id>/     django.views.generic.base.RedirectView
+/admin/auth/group/<path:object_id>/change/      django.contrib.admin.options.change_view        admin:auth_group_change
+/admin/auth/group/<path:object_id>/delete/      django.contrib.admin.options.delete_view        admin:auth_group_delete
+/admin/auth/group/<path:object_id>/history/     django.contrib.admin.options.history_view       admin:auth_group_history
+/admin/auth/group/add/  django.contrib.admin.options.add_view   admin:auth_group_add
+/admin/auth/user/       django.contrib.admin.options.changelist_view    admin:auth_user_changelist
+/admin/auth/user/<id>/password/ django.contrib.auth.admin.user_change_password  admin:auth_user_password_change
+/admin/auth/user/<path:object_id>/      django.views.generic.base.RedirectView
+/admin/auth/user/<path:object_id>/change/       django.contrib.admin.options.change_view        admin:auth_user_change
+/admin/auth/user/<path:object_id>/delete/       django.contrib.admin.options.delete_view        admin:auth_user_delete
+/admin/auth/user/<path:object_id>/history/      django.contrib.admin.options.history_view       admin:auth_user_history
+/admin/auth/user/add/   django.contrib.auth.admin.add_view      admin:auth_user_add
+/admin/authtoken/tokenproxy/    django.contrib.admin.options.changelist_view    admin:authtoken_tokenproxy_changelist
+/admin/authtoken/tokenproxy/<path:object_id>/   django.views.generic.base.RedirectView
+/admin/authtoken/tokenproxy/<path:object_id>/change/    django.contrib.admin.options.change_view        admin:authtoken_tokenproxy_change
+/admin/authtoken/tokenproxy/<path:object_id>/delete/    django.contrib.admin.options.delete_view        admin:authtoken_tokenproxy_delete
+/admin/authtoken/tokenproxy/<path:object_id>/history/   django.contrib.admin.options.history_view       admin:authtoken_tokenproxy_history
+/admin/authtoken/tokenproxy/add/        django.contrib.admin.options.add_view   admin:authtoken_tokenproxy_add
+/admin/autocomplete/    django.contrib.admin.sites.autocomplete_view    admin:autocomplete
+/admin/jsi18n/  django.contrib.admin.sites.i18n_javascript      admin:jsi18n
+/admin/login/   django.contrib.admin.sites.login        admin:login
+/admin/logout/  django.contrib.admin.sites.logout       admin:logout
+/admin/password_change/ django.contrib.admin.sites.password_change      admin:password_change
+/admin/password_change/done/    django.contrib.admin.sites.password_change_done admin:password_change_done
+/admin/r/<int:content_type_id>/<path:object_id>/        django.contrib.contenttypes.views.shortcut      admin:view_on_site
+/api/   rest_framework.routers.APIRootView      api-root
+/api/\.<format>/        rest_framework.routers.APIRootView      api-root
+/api/movies/    api.views.MovieViewSet  movie-list
+/api/movies/<pk>/       api.views.MovieViewSet  movie-detail
+/api/movies/<pk>/rate_movie/    api.views.MovieViewSet  movie-rate-movie
+/api/movies/<pk>/rate_movie\.<format>/  api.views.MovieViewSet  movie-rate-movie
+/api/movies/<pk>\.<format>/     api.views.MovieViewSet  movie-detail
+/api/movies\.<format>/  api.views.MovieViewSet  movie-list
+/api/ratings/   api.views.RatingViewSet rating-list
+/api/ratings/<pk>/      api.views.RatingViewSet rating-detail
+/api/ratings/<pk>\.<format>/    api.views.RatingViewSet rating-detail
+/api/ratings\.<format>/ api.views.RatingViewSet rating-list
+/api/users/     api.views.UserViewSet   user-list
+/api/users/<pk>/        api.views.UserViewSet   user-detail
+/api/users/<pk>\.<format>/      api.views.UserViewSet   user-detail
+/api/users\.<format>/   api.views.UserViewSet   user-list
+/auth/  rest_framework.authtoken.views.ObtainAuthToken
