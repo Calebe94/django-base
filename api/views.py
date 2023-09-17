@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from .models import Movie, Rating
 from .serializers import MovieSerializer, RatingSerializer, UserSerializer
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -15,6 +16,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
     authentication_classes = (TokenAuthentication, )
+    permission_classes = (IsAuthenticated,)
 
     @action(detail=True, methods=['POST','GET'])
     def rate_movie(self, request, pk=None):
@@ -43,3 +45,14 @@ class RatingViewSet(viewsets.ModelViewSet):
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
     authentication_classes = (TokenAuthentication, )
+    permission_classes = (IsAuthenticated,)
+
+    def create(self, request, *args, **kwargs):
+        status_code = status.HTTP_400_BAD_REQUEST
+        response = {'message': "You can't create rating like that"}
+        return Response(response, status=status_code)
+
+    def update(self, request, *args, **kwargs):
+        status_code = status.HTTP_400_BAD_REQUEST
+        response = {'message': "You can't update rating like that"}
+        return Response(response, status=status_code)
