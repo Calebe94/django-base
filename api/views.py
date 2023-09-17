@@ -11,8 +11,16 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['POST','GET'])
     def rate_movie(self, request, pk=None):
-        response = {'message': "it's working"}
-        return Response(response, status=status.HTTP_200_OK)
+        response = dict()
+        status_code = status.HTTP_200_OK
+        if 'stars' in request.data:
+            movie = Movie.objects.get(id=pk)
+            print(movie.title)
+            response = {'message': "{}".format(movie.title)}
+        else:
+            status_code = status.HTTP_400_BAD_REQUEST
+            response = {'message': "you need to provide stars"}
+        return Response(response, status=status_code)
 
 class RatingViewSet(viewsets.ModelViewSet):
     queryset = Rating.objects.all()
