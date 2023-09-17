@@ -1,0 +1,12 @@
+#+title: Readme
+
+* Django Movie Rater Project
+
+This project was created as part of the Udemy course titled *React &
+Django Full Stack: Web App, Backend API, Mobile Apps*. The course can be
+accessed at [[https://www.udemy.com/share/101J3c3@t5t0ZZXTzqCLfejVh-3w-xEgUa1ByMdPvBAK1hPitnPVDPhkT580OI7cC3YNgc-7/][Udemy Course Link]].
+
+** Project Description
+
+This project is a full-stack web application built using Django for the backend.
+It includes a RESTful API offering a comprehensive learning experience for building modern web applications.
